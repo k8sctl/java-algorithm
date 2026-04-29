@@ -7,19 +7,15 @@ public class BOJ1546평균구하기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[] arr = new int[N];
+        int sum = 0;
+        int max = 0;
 
         for (int i = 0 ; i < N ;i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        int sum = 0;
-        int max = arr[0];
-        for (int num : arr) {
-            if (num > max) {
-                max = num;
+            int temp = sc.nextInt();
+            if (temp > max) {
+                max = temp;
             }
-            sum += num;
+            sum += temp;
         }
 
         double avg = sum * 100.0 / max / N;
